@@ -64,9 +64,6 @@ body {
     height: 500px;
 }
 
-#game-container span {
-}
-
 .square {
     border: 2px solid black;
     float: left;
