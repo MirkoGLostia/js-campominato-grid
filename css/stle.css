@@ -13,10 +13,30 @@
 
 /********
  *HEADER*
- ********
+ ********/
 
+#head-container {
+    background-color: #b8e2f2;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+#head-logo {
+    font-size: 50px;
+    margin: 20px;
+}
 
+#head-choices {
+    margin: 20px;
+    font-size: 40px;
+}
+
+#head-choices > select, button {
+    margin: 10px;
+    padding: 5px;
+}
 
 
 
