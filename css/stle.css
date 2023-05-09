@@ -8,6 +8,10 @@
     margin: 0;
 }
 
+body {
+    background-color: #7fffd4;
+}
+
 
 
 
@@ -49,27 +53,28 @@
  ******/
 
 #main-container {
-    background-color: #7fffd4;
     height: calc(100vh - 150px);
+    overflow: hidden;
 }
 
 #game-container {
-    margin: 0 auto;
-    padding-top: 150px;
-    width: 500px;
-} 
-
-#game-container > div {
     border: 2px solid black;
+    margin: 100px auto;
     width: 500px;
     height: 500px;
 }
 
+#game-container span {
+}
+
 .square {
+    border: 2px solid black;
     float: left;
     width: 10%;
     height: 10%;
-    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -82,6 +87,7 @@
  ********/
 
 #foot-container {
+    background-color: white;
     height: 50px;
 }
 

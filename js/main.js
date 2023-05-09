@@ -14,9 +14,30 @@ Bonus
 
 // variabili
 
-const nummmmeri = arrayOfRandomNumber(3, 10);
+const gameTable = document.getElementById("game-container");
 
-console.log(nummmmeri);
+const number = numberList(100);
+
+console.log(number);
+
+
+for (let i = 0; i < 100; i++) {
+
+    const squareContainer = createSquare ("div", "square");
+
+    const squareContent = document.createElement("span");
+
+    squareContent.append(number[i]);
+
+    squareContainer.append(squareContent);
+
+    gameTable.append(squareContainer);
+
+}
+
+
+
+
 
 
 
@@ -46,6 +67,32 @@ function arrayOfRandomNumber (min, max) {
     }
 
     return containerNum;
+
+}
+
+function createSquare(tagType, classToAdd) {
+    
+    const newSquare = document.createElement(tagType);
+
+    newSquare.classList.add(classToAdd);
+
+    return newSquare;
+
+}
+
+// numbers from 1 to tot
+function numberList(tot) {
+
+    const numberArray = [];
+
+    for (let i = 0; i < tot; i++) {
+        const number = i + 1;
+
+        numberArray.push(number)
+        
+    }
+    
+    return numberArray;
 
 }
 
