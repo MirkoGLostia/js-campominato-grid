@@ -16,7 +16,7 @@
  ********/
 
 #head-container {
-    background-color: #b8e2f2;
+    background-color: #ffffff;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -48,6 +48,29 @@
  *MAIN*
  ******/
 
+#main-container {
+    background-color: #7fffd4;
+    height: calc(100vh - 150px);
+}
+
+#game-container {
+    margin: 0 auto;
+    padding-top: 150px;
+    width: 500px;
+} 
+
+#game-container > div {
+    border: 2px solid black;
+    width: 500px;
+    height: 500px;
+}
+
+.square {
+    float: left;
+    width: 10%;
+    height: 10%;
+    border: 2px solid black;
+}
 
 
 
@@ -58,6 +81,14 @@
  *FOOTER*
  ********/
 
+#foot-container {
+    height: 50px;
+}
+
+#foot-container > div {
+    font-size: 18px;
+    padding: 10px 20px;
+}
 
 
 
