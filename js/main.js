@@ -11,3 +11,42 @@ Bonus
 - con difficoltà 2 => 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe;
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 */
+
+// variabili
+
+
+
+
+
+
+
+
+// funzioni
+
+function randomNumber (min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function arrayOfRandomNumber (min, max) {
+
+    const containerNum = [];
+
+    while (containerNum.length < max) {
+
+        const nuovoNum = randomNumber (min, max);
+
+        if (!containerNum.includes (nuovoNum)) {
+
+            containerNum.push (nuovoNum);
+            
+        }
+        
+    }
+
+    return containerNum;
+
+}
+
+
+
+
