@@ -14,7 +14,9 @@ Bonus
 
 // variabili
 
+const nummmmeri = arrayOfRandomNumber(3, 10);
 
+console.log(nummmmeri);
 
 
 
@@ -23,21 +25,21 @@ Bonus
 
 // funzioni
 
-function randomNumber (min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+function randomNumber (minNum, maxNum) {
+    return Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
 }
 
 function arrayOfRandomNumber (min, max) {
 
     const containerNum = [];
 
-    while (containerNum.length < max) {
+    while ((containerNum.length) < max - min + 1) {
+        
+        const nuovoNum = Math.floor(Math.random() * (max - min + 1) + min);
 
-        const nuovoNum = randomNumber (min, max);
+        if (!containerNum.includes(nuovoNum)) {
 
-        if (!containerNum.includes (nuovoNum)) {
-
-            containerNum.push (nuovoNum);
+            containerNum.push(nuovoNum);
             
         }
         
