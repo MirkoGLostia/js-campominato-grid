@@ -16,20 +16,30 @@ Bonus
 
 const gameTable = document.getElementById("game-container");
 
-const number = numberList(100);
-
 
 
 
 // pulsante start
 start.onclick = function() {
+
+    // variabili
+
+    let difficultyLvlValue = getTheDifficulty();
+
+    let classNumberSquare = "square-" + difficultyLvlValue;
+    
+    const number = numberList(difficultyLvlValue);
+
+
+
+
     
     document.getElementById("game-container").innerText = "";
     
     // creation grid
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < difficultyLvlValue; i++) {
         
-        const squareContainer = createSquare ("div", "square");
+        const squareContainer = createSquare ("div", classNumberSquare);
         
         const squareContent = document.createElement("span");
         
@@ -120,6 +130,34 @@ function numberList(tot) {
     
     return numberArray;
 
+}
+
+// difficulty level value
+function getTheDifficulty() {
+
+    let levelValue = 0;
+
+    const level = document.getElementById("dififculty-lvl-choices").value;
+
+    if (level === "easy") {
+
+        levelValue = 100;
+        
+    }
+    else if (level === "normal") {
+
+        levelValue = 81;
+        
+    }
+    else if (level === "hard") {
+
+        levelValue = 49;
+
+    }
+
+
+    return levelValue
+    
 }
 
 
