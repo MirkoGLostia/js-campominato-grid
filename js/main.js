@@ -18,20 +18,46 @@ const gameTable = document.getElementById("game-container");
 
 const number = numberList(100);
 
-console.log(number);
 
 
-for (let i = 0; i < 100; i++) {
 
-    const squareContainer = createSquare ("div", "square");
+// pulsante start
+start.onclick = function() {
+    
+    document.getElementById("game-container").innerText = "";
+    
+    // creation grid
+    for (let i = 0; i < 100; i++) {
+        
+        const squareContainer = createSquare ("div", "square");
+        
+        const squareContent = document.createElement("span");
+        
+        squareContent.append(number[i]);
+        
+        squareContainer.append(squareContent);
+        
+        gameTable.append(squareContainer);
 
-    const squareContent = document.createElement("span");
 
-    squareContent.append(number[i]);
+        
+        // interazione con i quadrati
+        squareContainer.addEventListener("click", 
+        
+            function () {
+                
+                this.classList.add("bk-blue");
 
-    squareContainer.append(squareContent);
+                const thisSquare = document.querySelector("div.bk-blue span").value = number[i];
 
-    gameTable.append(squareContainer);
+                console.log(thisSquare);
+                
+            }
+        
+        )
+
+    }
+
 
 }
 

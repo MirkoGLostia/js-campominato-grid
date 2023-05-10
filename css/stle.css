@@ -55,6 +55,7 @@ body {
 #main-container {
     height: calc(100vh - 150px);
     overflow: hidden;
+    overflow-y: auto;
 }
 
 #game-container {
@@ -72,6 +73,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+.bk-blue {
+    background-color: blue;
 }
 
 
