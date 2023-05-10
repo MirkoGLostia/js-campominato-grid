@@ -12,7 +12,7 @@ Bonus
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 */
 
-// variabili
+// variabili globali
 
 const gameTable = document.getElementById("game-container");
 
@@ -81,30 +81,6 @@ start.onclick = function() {
 
 
 // funzioni
-
-function randomNumber (minNum, maxNum) {
-    return Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
-}
-
-function arrayOfRandomNumber (min, max) {
-
-    const containerNum = [];
-
-    while ((containerNum.length) < max - min + 1) {
-        
-        const nuovoNum = Math.floor(Math.random() * (max - min + 1) + min);
-
-        if (!containerNum.includes(nuovoNum)) {
-
-            containerNum.push(nuovoNum);
-            
-        }
-        
-    }
-
-    return containerNum;
-
-}
 
 function createSquare(tagType, classToAdd) {
     
